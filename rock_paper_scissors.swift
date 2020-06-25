@@ -1,4 +1,10 @@
-func getUserChoice (_ userInput: String) -> String {
+// put your name
+var playerName = "nisreen"
+//enter your choice at the bottom
+if playerName == "" {
+  print("Please enter your name")
+} else{ 
+  func getUserChoice (_ userInput: String) -> String {
   if userInput == "rock" || userInput == "paper" || userInput == "scissors" {
     return userInput
   } else {
@@ -29,29 +35,31 @@ func determineWinner (_ userChoice: String, _ compChoice: String) -> String {
       if compChoice == "paper" {
         decision = "The computer won"
       } else if compChoice == "scissors"{
-        decision = "The user won"
+        decision = "\(playerName) won"
       }
     case "paper":
       if compChoice == "scissors" {
         decision = "The computer won"
       } else if compChoice == "rock"{
-        decision = "The user won"
+        decision = "\(playerName) won"
       }
     case "scissors":
       if compChoice == "rock" {
         decision = "The computer won"
       } else if compChoice == "paper"{
-        decision = "The user won"
+        decision = "\(playerName) won"
       }
     default:
       decision = "Something went wrong"
   }
   return decision
 }
+// enter your choice
+// rock, paper, or scissors
+let userChoice = getUserChoice("rock")
+let compChoice = getComputerChoice()
 
-var userChoice = getUserChoice("hi")
-var compChoice = getComputerChoice()
 
 print("You threw \(userChoice)")
 print("The computer threw \(compChoice)")
-print(determineWinner(userChoice, compChoice))
+print(determineWinner(userChoice, compChoice))}
