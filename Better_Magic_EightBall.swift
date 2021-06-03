@@ -41,23 +41,35 @@ switch randomNumber {
   eightBall = "         Error         "
 }
 
-if playerName == "" {
-  print("Please Enter Name")
-}else if playerQuestion == "" {
-  print("Please Enter Question")
-}else{
-    print("\(playerName) asks: \(playerQuestion)")
-print("                                      /  \\ ")
-print("                                    /      \\")
-print("                                  /          \\")
-print("                                /              \\")
-print("                              /                  \\")
-print("                            /                      \\")
-print("                          /  ---------------------   \\")
-print("                        /   \(eightBall)    \\    ")
-print("                      /      ----------------------      \\")
-print("                    /                                      \\")
-print("                  /                                          \\")
-print("                /______________________________________________\\")
+if playerQuestion.isEmpty {
+  print("Please Enter a Question")
+} else if playerName.isEmpty {
+  print("Question: \(playerQuestion)")
+print("                                /  \\ ")
+print("                              /      \\")
+print("                            /          \\")
+print("                          /              \\")
+print("                        /                  \\")
+print("                      /                      \\")
+print("                    /  ---------------------   \\")
+print("                  /   \(eightBall)    \\    ")
+print("                /      ----------------------      \\")
+print("              /                                      \\")
+print("            /                                          \\")
+print("          /______________________________________________\\")
+} else {
+  print("\(playerName) asks: \(playerQuestion)")
+print("                                /  \\ ")
+print("                              /      \\")
+print("                            /          \\")
+print("                          /              \\")
+print("                        /                  \\")
+print("                      /                      \\")
+print("                    /  ---------------------   \\")
+print("                  /   \(eightBall)    \\    ")
+print("                /      ----------------------      \\")
+print("              /                                      \\")
+print("            /                                          \\")
+print("          /______________________________________________\\")
 }
 
