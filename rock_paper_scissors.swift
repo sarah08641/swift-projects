@@ -1,12 +1,9 @@
-/ put your name
-var playerName = "sarah"
 // enter your choice
-var choice = ""
+var choice = "rock"
 
-if playerName == "" {
-  print("Please enter your name")
-} else{ 
-  func getUserChoice (_ userInput: String) -> String {
+choice = choice.lowercased()
+
+func getUserChoice (_ userInput: String) -> String {
   if userInput == "rock" || userInput == "paper" || userInput == "scissors" {
     return userInput
   } else {
@@ -34,21 +31,21 @@ func determineWinner (_ playerChoice: String, _ computerChoice: String) -> Strin
   switch playerChoice {
     case "rock":
       if computerChoice == "paper" {
-        decision = "won"
+        decision = "The computer won!"
       } else if computerChoice == "scissors"{
-        decision = "\(playerName) won"
+        decision = "You won!"
       }
     case "paper":
       if computerChoice == "scissors" {
-        decision = "The computer won"
+        decision = "The computer won!"
       } else if computerChoice == "rock"{
-        decision = "\(playerName) won"
+        decision = "You won!"
       }
     case "You threw scissors":
       if computerChoice == "rock" {
-        decision = "The computer won"
+        decision = "The computer won!"
       } else if computerChoice == "paper"{
-        decision = "\(playerName) won"
+        decision = "You won!"
       }
     default:
       decision = "Something went wrong"
@@ -61,8 +58,11 @@ let compChoice = getComputerChoice()
 
 if choice.isEmpty {
   print("Please Enter a Choice")
-} else {
-  print("You threw \(userChoice)")
-  print("The computer threw \(compChoice)")
-  print(determineWinner(userChoice, compChoice))}
-}
+  } else if choice == "rock" || choice == "paper" || choice == "scissors" {
+    print("You threw \(userChoice)")
+    print("The computer threw \(compChoice)")
+    print(determineWinner(userChoice, compChoice))
+  } else {
+    print("You can only enter rock, paper, or scissors")
+  }
+
