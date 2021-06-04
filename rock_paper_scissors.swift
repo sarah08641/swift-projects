@@ -1,6 +1,8 @@
 // put your name
 var playerName = ""
-//enter your choice at the bottom
+// enter your choice here
+var choice = ""
+
 if playerName == "" {
   print("Please enter your name")
 } else{ 
@@ -54,12 +56,11 @@ func determineWinner (_ userChoice: String, _ compChoice: String) -> String {
   }
   return decision
 }
-// enter your choice
-// rock, paper, or scissors
+
 let userChoice = getUserChoice("rock")
 let compChoice = getComputerChoice()
 
 
-print("You threw \(userChoice)")
+print("You threw \(choice)")
 print("The computer threw \(compChoice)")
 print(determineWinner(userChoice, compChoice))}
