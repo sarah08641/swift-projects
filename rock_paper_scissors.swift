@@ -1,5 +1,5 @@
-// put your name
-var playerName = ""
+/ put your name
+var playerName = "sarah"
 // enter your choice
 var choice = ""
 
@@ -29,25 +29,25 @@ func getComputerChoice() -> String {
 }
 
 
-func determineWinner (_ userChoice: String, _ compChoice: String) -> String {
+func determineWinner (_ playerChoice: String, _ computerChoice: String) -> String {
   var decision = "It's a tie"
-  switch userChoice {
+  switch playerChoice {
     case "rock":
-      if compChoice == "paper" {
-        decision = "The computer won"
-      } else if compChoice == "scissors"{
+      if computerChoice == "paper" {
+        decision = "won"
+      } else if computerChoice == "scissors"{
         decision = "\(playerName) won"
       }
     case "paper":
-      if compChoice == "scissors" {
+      if computerChoice == "scissors" {
         decision = "The computer won"
-      } else if compChoice == "rock"{
+      } else if computerChoice == "rock"{
         decision = "\(playerName) won"
       }
-    case "scissors":
-      if compChoice == "rock" {
+    case "You threw scissors":
+      if computerChoice == "rock" {
         decision = "The computer won"
-      } else if compChoice == "paper"{
+      } else if computerChoice == "paper"{
         decision = "\(playerName) won"
       }
     default:
@@ -59,7 +59,10 @@ func determineWinner (_ userChoice: String, _ compChoice: String) -> String {
 let userChoice = getUserChoice(choice)
 let compChoice = getComputerChoice()
 
-
-print("You threw \(userChoice)")
-print("The computer threw \(compChoice)")
-print(determineWinner(userChoice, compChoice))}
+if choice.isEmpty {
+  print("Please Enter a Choice")
+} else {
+  print("You threw \(userChoice)")
+  print("The computer threw \(compChoice)")
+  print(determineWinner(userChoice, compChoice))}
+}
