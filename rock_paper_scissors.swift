@@ -1,5 +1,5 @@
 // put your name
-var playerName = "nisreen"
+var playerName = ""
 //enter your choice at the bottom
 if playerName == "" {
   print("Please enter your name")
