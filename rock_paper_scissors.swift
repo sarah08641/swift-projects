@@ -1,6 +1,6 @@
 // put your name
 var playerName = ""
-// enter your choice here
+// enter your choice
 var choice = ""
 
 if playerName == "" {
@@ -28,7 +28,6 @@ func getComputerChoice() -> String {
   }
 }
 
-// print(getComputerChoice())
 
 func determineWinner (_ userChoice: String, _ compChoice: String) -> String {
   var decision = "It's a tie"
@@ -57,10 +56,10 @@ func determineWinner (_ userChoice: String, _ compChoice: String) -> String {
   return decision
 }
 
-let userChoice = getUserChoice("rock")
+let userChoice = getUserChoice(choice)
 let compChoice = getComputerChoice()
 
 
-print("You threw \(choice)")
+print("You threw \(userChoice)")
 print("The computer threw \(compChoice)")
 print(determineWinner(userChoice, compChoice))}
